@@ -30,9 +30,9 @@ public class EditLinkDataServlet extends HttpServlet {
         PersistenceManagerFactory factory = PMF.get();
         PersistenceManager manager = factory.getPersistenceManager();
         LinkData data = (LinkData)manager.getObjectById(LinkData.class,id);
-        data.setTitle(title);
-        data.setUrl(url);
-        data.setComment(comment);
+        data.setMaisuu(title);
+        data.setAddress(url);
+        data.setTel(comment);
         manager.close();
         resp.sendRedirect("/index.html");
     }

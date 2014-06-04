@@ -10,24 +10,28 @@ public class LinkData {
     @PrimaryKey
     @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
     private Long id;
+
+    @Persistent
+    private String name;    
+    
+    @Persistent
+    private String maisuu;
      
     @Persistent
-    private String title;
+    private String address;
      
     @Persistent
-    private String url;
-     
-    @Persistent
-    private String comment;
+    private String tel;
      
     @Persistent
     private Date datetime;
  
-    public LinkData(String title, String url, String comment, Date datetime) {
+    public LinkData(String name, String maisuu, String address, String tel, Date datetime) {
         super();
-        this.title = title;
-        this.url = url;
-        this.comment = comment;
+        this.name = name;
+        this.maisuu = maisuu;
+        this.address = address;
+        this.tel = tel;
         this.datetime = datetime;
     }
  
@@ -38,29 +42,37 @@ public class LinkData {
     public void setId(Long id) {
         this.id = id;
     }
- 
-    public String getTitle() {
-        return title;
+
+    public String getName() {
+        return name;
     }
  
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
+    }   
+    
+    public String getMaisuu() {
+        return maisuu;
     }
  
-    public String getUrl() {
-        return url;
+    public void setMaisuu(String maisuu) {
+        this.maisuu = maisuu;
     }
  
-    public void setUrl(String url) {
-        this.url = url;
+    public String getAddress() {
+        return address;
     }
  
-    public String getComment() {
-        return comment;
+    public void setAddress(String address) {
+        this.address = address;
     }
  
-    public void setComment(String comment) {
-        this.comment = comment;
+    public String getTel() {
+        return tel;
+    }
+ 
+    public void setTel(String tel) {
+        this.tel = tel;
     }
  
     public Date getDatetime() {

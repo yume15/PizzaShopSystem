@@ -11,13 +11,14 @@
             var res = '';
             if (json.length == 1){
                 res += '<tr><td>' + json[0].id +'</td></tr>';
-                res += '<tr><td>' + json[0].title +'</td></tr>';
-                res += '<tr><td>' + json[0].url +'</td></tr>';
-                res += '<tr><td>' + json[0].comment +'</td></tr>';
+                res += '<tr><td>' + json[0].name +'</td></tr>';
+                res += '<tr><td>' + json[0].maisuu +'</td></tr>';                
+                res += '<tr><td>' + json[0].address+'</td></tr>';
+                res += '<tr><td>' + json[0].tel +'</td></tr>';
             } else {
-                for (var i = 0;i < json.length;i++){
+            	for (var i = 0;i < json.length;i++){
                     res += '<tr><td><a href="javascript:return false;" onclick="getData(' + json[i].id +');">' + json[i].id + '</a></td>';
-                    res += '<td><a href="' + json[i].url + '">' + json[i].title + '</a></td>' +
+                    res += '<td><a href="' + json[i].address + '">' + json[i].maisuu + '</a></td>' +
                     '<td><a href="edit.html?id=' + json[i].id + '">Edit</td>' +
                     '<td><a href="del.html?id=' + json[i].id + '">Delete</td></tr>';
                 }

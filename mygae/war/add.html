@@ -5,12 +5,13 @@
         <title>LinkDataの追加</title>
     </head>
     <body>
-        <h1>URLデータの追加</h1>
+        <h1>ピザの注文データ</h1>
         <table>
         <form method="post" action="/add">
-            <tr><th>TITLE:</th><td><input type="text" name="title"></td></tr>
-            <tr><th>URL:</th><td><input type="text" name="url"></td></tr>
-            <tr><th>COMMENT:</th><td><textarea name="comment"></textarea></td></tr>
+            <tr><th>名前</th><td><input type="text" name="name"></td></tr>        
+            <tr><th>ピザの枚数</th><td><input type="text" name="maisuu"></td></tr>
+            <tr><th>住所</th><td><input type="text" name="address"></td></tr>
+            <tr><th>電話番号</th><td><textarea name="tel"></textarea></td></tr>
             <tr><th></th><td><input type="submit" value="追加"></td></tr>
         </form>
         </table>

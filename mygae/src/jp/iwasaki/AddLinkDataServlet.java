@@ -1,7 +1,6 @@
 package jp.iwasaki;
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.*;
  
 import javax.jdo.*;
@@ -24,11 +23,12 @@ public class AddLinkDataServlet extends HttpServlet {
             HttpServletResponse resp)
             throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
-        String title = req.getParameter("title");
-        String url = req.getParameter("url");
-        String comment = req.getParameter("comment");
+        String name = req.getParameter("name");
+        String maisuu = req.getParameter("maisuu");
+        String address = req.getParameter("address");
+        String tel = req.getParameter("tel");
         Date date = Calendar.getInstance().getTime();
-        LinkData data = new LinkData(title,url,comment,date);
+        LinkData data = new LinkData(name,maisuu,address,tel,date);
         PersistenceManagerFactory factory = PMF.get();
         PersistenceManager manager = factory.getPersistenceManager();
         try {
